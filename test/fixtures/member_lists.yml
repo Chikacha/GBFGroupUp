@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_in_game: MyString
+  name_in_discord: MyString
+  player_id: MyString
+  combat_capabilities: MyString
+  player_job: MyString
+  player_exability: MyString
+  player_attribute: MyString
+  needMVP: MyString
+  notes: MyText
+
+two:
+  name_in_game: MyString
+  name_in_discord: MyString
+  player_id: MyString
+  combat_capabilities: MyString
+  player_job: MyString
+  player_exability: MyString
+  player_attribute: MyString
+  needMVP: MyString
+  notes: MyText

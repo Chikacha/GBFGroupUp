@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>成員清單</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>遊戲名稱</th>
+      <th>Discord名稱</th>
+      <th>玩家ID</th>
+      <th>戰力</th>
+      <th>職業</th>
+      <th>EX技能</th>
+      <th>玩家屬性</th>
+      <th>MVP(要/不要)</th>
+      <th>備註</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @member_lists.each do |member_list| %>
+      <tr>
+        <td><%= member_list.name_in_game %></td>
+        <td><%= member_list.name_in_discord %></td>
+        <td><%= member_list.player_id %></td>
+        <td><%= member_list.combat_capabilities %></td>
+        <td><%= member_list.player_job %></td>
+        <td><%= member_list.player_exability %></td>
+        <td><%= member_list.player_attribute %></td>
+        <td><%= member_list.needMVP %></td>
+        <td><%= member_list.notes %></td>
+        <td><%= link_to '顯示', member_list, class: "btn btn-success active"%></td>
+        <td><%= link_to '編輯', edit_member_list_path(member_list), class: "btn btn-warning active" %></td>
+        <!--<td><%= link_to '刪除', member_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '報名', new_member_list_path, class: "btn btn-primary active"%>

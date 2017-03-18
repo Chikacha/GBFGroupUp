@@ -1,0 +1,71 @@
+<%= form_for(member_list) do |f| %>
+  <% if member_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(member_list.errors.count, "error") %> prohibited this member_list from being saved:</h2>
+
+      <ul>
+      <% member_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    玩家名稱
+    <% f.label :name_in_game %>
+    <%= f.text_field :name_in_game %>
+  </div>
+
+  <div class="field">
+    Discord名稱
+    <% f.label :name_in_discord %>
+    <%= f.text_field :name_in_discord %>
+  </div>
+
+  <div class="field">
+    玩家ID
+    <% f.label :player_id %>
+    <%= f.text_field :player_id %>
+  </div>
+
+  <div class="field">
+    戰力
+    <% f.label :combat_capabilities %>
+    <%= f.text_field :combat_capabilities %>
+  </div>
+
+  <div class="field">
+    職業
+    <% f.label :player_job %>
+    <%= f.text_field :player_job %>
+  </div>
+
+  <div class="field">
+    EX技能
+    <% f.label :player_exability %>
+    <%= f.text_field :player_exability %>
+  </div>
+
+  <div class="field">
+    屬性
+    <% f.label :player_attribute %>
+    <%= f.text_field :player_attribute %>
+  </div>
+
+  <div class="field">
+    MVP（要/不要）
+    <% f.label :needMVP %>
+    <%= f.text_field :needMVP %>
+  </div>
+
+  <div class="field">
+    備註
+    <% f.label :notes %>
+    <%= f.text_area :notes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit ( f.object.new_record? ? "建立" : "更新"), class: "btn btn-info active"%>
+  </div>
+<% end %>

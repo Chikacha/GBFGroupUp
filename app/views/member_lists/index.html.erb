@@ -20,8 +20,14 @@
   </thead>
 
   <tbody>
+    <% @i = 0 %>
     <% @member_lists.each do |member_list| %>
       <tr>
+        <% if @i < 30 %>
+        <% @i = @i + 1 %>
+        
+        <td><%= @i %></td>
+        <% end %>
         <td><%= member_list.name_in_game %></td>
         <td><%= member_list.name_in_discord %></td>
         <td><%= member_list.player_id %></td>

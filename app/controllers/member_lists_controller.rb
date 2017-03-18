@@ -28,7 +28,7 @@ class MemberListsController < ApplicationController
 
     respond_to do |format|
       if @member_list.save
-        format.html { redirect_to @member_list, notice: 'Member list was successfully created.' }
+        format.html { redirect_to @member_list, notice: '報名成功！！' }
         format.json { render :show, status: :created, location: @member_list }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class MemberListsController < ApplicationController
   def update
     respond_to do |format|
       if @member_list.update(member_list_params)
-        format.html { redirect_to @member_list, notice: 'Member list was successfully updated.' }
+        format.html { redirect_to @member_list, notice: '更新成功！！' }
         format.json { render :show, status: :ok, location: @member_list }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class MemberListsController < ApplicationController
   def destroy
     @member_list.destroy
     respond_to do |format|
-      format.html { redirect_to member_lists_url, notice: 'Member list was successfully destroyed.' }
+      format.html { redirect_to member_lists_url, notice: '刪除成功！！' }
       format.json { head :no_content }
     end
   end
